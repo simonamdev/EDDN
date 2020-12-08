@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: ./docker/gateway.Dockerfile
+    ports:
+      - "8081:8081"
+  relay:
+    build:
+      context: .
+      dockerfile: ./docker/relay.Dockerfile
+    ports:
+      - "9090:9090"
+  monitor:
+    build:
+      context: .
+      dockerfile: ./docker/monitor.Dockerfile
+    ports:
+      - "9091:9091"
