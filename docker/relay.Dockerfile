@@ -1,8 +1,9 @@
-FROM python:2.7-slim-buster
+FROM python:2.7-buster
 
 WORKDIR /app
 
 COPY . .
+RUN mv docker/Settings.docker.py src/eddn/conf/Settings.py
 
 RUN python setup.py install
 

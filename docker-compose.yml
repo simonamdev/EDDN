@@ -6,15 +6,29 @@ services:
       dockerfile: ./docker/gateway.Dockerfile
     ports:
       - "8081:8081"
+    networks:
+      - eddn
+    depends_on:
+      - relay
   relay:
     build:
       context: .
       dockerfile: ./docker/relay.Dockerfile
     ports:
       - "9090:9090"
+      - "8500:8500"
+    networks:
+      - eddn
   monitor:
     build:
       context: .
       dockerfile: ./docker/monitor.Dockerfile
     ports:
       - "9091:9091"
+    networks:
+      - eddn
+    depends_on:
+      - relay
+networks:
+  eddn:
+    name: eddn
