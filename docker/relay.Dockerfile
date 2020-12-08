@@ -7,4 +7,4 @@ RUN mv docker/Settings.docker.py src/eddn/conf/Settings.py
 
 RUN python setup.py install
 
-CMD ["python", "src/eddn/Relay.py"]
+CMD ["python", "-u", "src/eddn/Relay.py"]

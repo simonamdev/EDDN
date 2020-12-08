@@ -7,4 +7,4 @@ RUN mv docker/Settings.docker.py src/eddn/conf/Settings.py
 
 RUN python setup.py install
 
-CMD ["python", "src/eddn/Gateway.py"]
+CMD ["python", "-u", "src/eddn/Gateway.py"]

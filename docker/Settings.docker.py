@@ -31,7 +31,7 @@ class _Settings(object):
     RELAY_DUPLICATE_MAX_MINUTES = 15
 
     # If set to false, don't listen to topic and accept all incoming messages
-    RELAY_RECEIVE_ONLY_GATEWAY_EXTRA_JSON = True
+    RELAY_RECEIVE_ONLY_GATEWAY_EXTRA_JSON = False
 
     RELAY_EXTRA_JSON_SCHEMAS = {}
 
@@ -42,7 +42,7 @@ class _Settings(object):
     GATEWAY_HTTP_BIND_ADDRESS = "0.0.0.0"
     GATEWAY_HTTP_PORT = 8081
 
-    GATEWAY_SENDER_BINDINGS = ["tcp://*:8500"]
+    GATEWAY_SENDER_BINDINGS = ["tcp://0.0.0.0:8500"]
 
     GATEWAY_JSON_SCHEMAS = {
         "https://eddn.edcd.io/schemas/commodity/3": "schemas/commodity-v3.0.json",
