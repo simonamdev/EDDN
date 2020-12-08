@@ -31,7 +31,7 @@ setup(
       The Elite: Dangerous Data Network allows E:D players to share data. Not affiliated with Frontier Developments.
       """,
     install_requires=["argparse", "bottle", "enum34", "gevent",
-                      "jsonschema==2.6.0", "pyzmq==19.0.0", "simplejson", "mysql-connector-python", "strict_rfc3339"],
+                      "jsonschema==2.6.0", "pyzmq<16", "simplejson", "mysql-connector-python", "strict_rfc3339"],
     entry_points={
         'console_scripts': [
             'eddn-gateway = eddn.Gateway:main',
