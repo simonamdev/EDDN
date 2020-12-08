@@ -94,7 +94,8 @@ class _Settings(object):
     MONITOR_DB = {
         "user":     "eddn",
         "password": "cvLYM8AEqg29YTatFMEcqph3YkDWUMvC",
-        "database": "eddn"
+        "database": "eddn",
+        "host": "monitor_db"
     }
 
     MONITOR_UA = "UA-496332-23"

@@ -29,6 +29,12 @@ services:
       - eddn
     depends_on:
       - relay
+  # monitor_db:
+  #   image: mysql
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: cvLYM8AEqg29YTatFMEcqph3YkDWUMvC
+  #     MYSQL_DATABASE: eddn
 networks:
   eddn:
     name: eddn
